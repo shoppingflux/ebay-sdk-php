@@ -5,7 +5,7 @@ use DTS\eBaySDK\Test\Mocks\AmountClass;
 use DTS\eBaySDK\Test\Mocks\ComplexClass;
 use DTS\eBaySDK\Test\Mocks\SimpleClass;
 
-class ConstructTest extends \PHPUnit_Framework_TestCase
+class ConstructTest extends \PHPUnit\Framework\TestCase
 {
     public function testSettingPropertiesViaCtor()
     {
@@ -123,7 +123,8 @@ class ConstructTest extends \PHPUnit_Framework_TestCase
 
     public function testSettingInvalidPropertyViaCtor()
     {
-        $this->setExpectedException('\DTS\eBaySDK\Exceptions\UnknownPropertyException', 'Unknown property bar');
+        $this->expectException(\DTS\eBaySDK\Exceptions\UnknownPropertyException::class);
+        $this->expectExceptionMessage('Unknown property bar');
 
         new ComplexClass([
             'bar' => 'bar'
@@ -132,7 +133,8 @@ class ConstructTest extends \PHPUnit_Framework_TestCase
 
     public function testSettingInvalidPropertyTypeViaCtor()
     {
-        $this->setExpectedException('\DTS\eBaySDK\Exceptions\InvalidPropertyTypeException', 'Invalid property type provided for string. Expected string but got integer');
+        $this->expectException(\DTS\eBaySDK\Exceptions\InvalidPropertyTypeException::class);
+        $this->expectExceptionMessage('Invalid property type provided for string. Expected string but got integer');
 
         new ComplexClass([
             'string' => 123

@@ -185,7 +185,7 @@ class OAuthService
             'redirect_uri'  => $this->getConfig('ruName'),
             'response_type' => 'code',
             'state'         => $params['state'],
-            'scope'         => implode($params['scope'], ' ')
+            'scope'         => is_array($params['scope']) ? implode(' ', $params['scope']) : $params['scope']
 
         ];
 

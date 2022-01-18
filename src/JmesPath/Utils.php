@@ -256,7 +256,7 @@ class Utils
     private static function sliceIndices($subject, $start, $stop, $step)
     {
         $type = gettype($subject);
-        $len = $type == 'string' ? strlen($subject) : count($subject);
+        $len = $type === 'string' ? strlen($subject) : count($subject);
         list($start, $stop, $step) = self::adjustSlice($len, $start, $stop, $step);
 
         $result = [];
@@ -270,6 +270,6 @@ class Utils
             }
         }
 
-        return $type == 'string' ? implode($result, '') : $result;
+        return $type === 'string' ? implode('', $result) : $result;
     }
 }
