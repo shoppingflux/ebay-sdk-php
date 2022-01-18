@@ -1,7 +1,6 @@
 vendor
 composer.phar
 composer.lock
-build/artifacts
+build/
 docs/_build
-phpcs.phar
-php-cs-fixer.phar
+.phplint-cache
