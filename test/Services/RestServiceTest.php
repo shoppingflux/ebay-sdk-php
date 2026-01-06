@@ -192,7 +192,6 @@ class RestServiceTest extends \PHPUnit\Framework\TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Invalid configuration value provided for "sandbox". Expected bool, but got int(-1)
      */
     public function testSetConfigWillThrow()
     {

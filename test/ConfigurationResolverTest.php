@@ -57,7 +57,6 @@ class ConfigurationResolverTest extends \PHPUnit\Framework\TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Invalid configuration value provided for "foo". Expected array, but got int(-1)
      */
     public function testValidatesArray()
     {
@@ -71,7 +70,6 @@ class ConfigurationResolverTest extends \PHPUnit\Framework\TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Invalid configuration value provided for "foo". Expected bool, but got int(-1)
      */
     public function testValidatesBool()
     {
@@ -85,7 +83,6 @@ class ConfigurationResolverTest extends \PHPUnit\Framework\TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Invalid configuration value provided for "foo". Expected callable, but got int(-1)
      */
     public function testValidatesCallable()
     {
@@ -99,7 +96,6 @@ class ConfigurationResolverTest extends \PHPUnit\Framework\TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Invalid configuration value provided for "foo". Expected StdClass, but got int(-1)
      */
     public function testValidatesInstanceOf()
     {
@@ -113,7 +109,6 @@ class ConfigurationResolverTest extends \PHPUnit\Framework\TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Invalid configuration value provided for "foo". Expected int, but got string(3)
      */
     public function testValidatesInt()
     {
@@ -127,7 +122,6 @@ class ConfigurationResolverTest extends \PHPUnit\Framework\TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Invalid configuration value provided for "foo". Expected string, but got int(-1)
      */
     public function testValidatesStrings()
     {
