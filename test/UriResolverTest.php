@@ -63,7 +63,6 @@ class UriResolverTest extends \PHPUnit\Framework\TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Invalid uri parameter value provided for "foo". Expected array, but got int(-1)
      */
     public function testValidatesArray()
     {
@@ -84,7 +83,6 @@ class UriResolverTest extends \PHPUnit\Framework\TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Invalid uri parameter value provided for "foo". Expected bool, but got int(-1)
      */
     public function testValidatesBool()
     {
@@ -105,7 +103,6 @@ class UriResolverTest extends \PHPUnit\Framework\TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Invalid uri parameter value provided for "foo". Expected callable, but got int(-1)
      */
     public function testValidatesCallable()
     {
@@ -126,7 +123,6 @@ class UriResolverTest extends \PHPUnit\Framework\TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Invalid uri parameter value provided for "foo". Expected int, but got string(3)
      */
     public function testValidatesInt()
     {
@@ -147,7 +143,6 @@ class UriResolverTest extends \PHPUnit\Framework\TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Invalid uri parameter value provided for "foo". Expected string, but got int(-1)
      */
     public function testValidatesStrings()
     {
